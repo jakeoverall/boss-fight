@@ -57,6 +57,7 @@ document.getElementById('hero-health').innerText = '💖 ' + player.currentHealt
 
 ```js
 document.getElementById('enemy-type').innerText = currentEnemy.type;
+// Look at the index.html and see if you can add the currentEnemy's Health value to the page
 ```
 
 * The `attackEnemy()` function:
