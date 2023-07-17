@@ -29,7 +29,7 @@ function showPlayerActions() {
 function hidePlayerActions(hide) {
   document.getElementById('player-actions').classList.remove('show')
   if (!hide) {
-    setTimeout(() => showPlayerActions(), 1000)
+    setTimeout(() => showPlayerActions(), 250)
   }
 }
 
