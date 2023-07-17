@@ -48,8 +48,6 @@ main .screen:not(.show) {
   position: relative;
 }
 
-
-
 .hero-container {
   position: absolute;
   bottom: 20vh;

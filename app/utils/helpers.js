@@ -69,14 +69,18 @@ function pickRandomEnemyFromCurrentStage() {
   document.querySelector('.enemy-container img#enemy-picture')?.setAttribute('src', 'assets/' + currentEnemy.type + '.gif')
 }
 
-
+let timer = 0
 function messageUser(message = '') {
   const messageElem = document.getElementById("messagebar")
-
+  
   messageElem.innerText = message
-
+  
+  if (timer) { return }
   messageElem.classList.add("show");
 
-  setTimeout(() => messageElem.classList.remove('show'), 3000);
+  timer = setTimeout(() => {
+    messageElem.classList.remove('show')
+    timer = 0
+  }, 3000);
 
 }
