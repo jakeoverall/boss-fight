@@ -48,6 +48,10 @@ main .screen:not(.show) {
   position: relative;
 }
 
+.store-container{
+  height: 60vh;
+}
+
 .hero-container {
   position: absolute;
   bottom: 20vh;
