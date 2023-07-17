@@ -29,10 +29,13 @@ main .screen:not(.show) {
   transition-delay: .15s;
 }
 
-#start-screen {
-  background-image: url(start-screen.gif);
+.centered {
   display: grid;
   place-content: center;
+}
+
+#start-screen {
+  background-image: url(start-screen.gif);
   z-index: 4;
 }
 
@@ -44,8 +47,6 @@ main .screen:not(.show) {
 #stages {
   position: relative;
 }
-
-
 
 .hero-container {
   position: absolute;
@@ -68,11 +69,6 @@ main .screen:not(.show) {
   top: -228px;
   left: 128px;
   pointer-events: none;
-}
-
-.hero-container.hero-alt::after{
-  background-image: url(hero2.gif);
-  transform: scaleX(1);
 }
 
 
@@ -135,7 +131,7 @@ main .screen:not(.show) {
 }
 
 .action-box.show {
-  transition-delay: 1.5s;
+  transition-delay: .25s;
   max-height: 800px;
   opacity: 1;
   min-width: 300px;
