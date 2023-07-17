@@ -57,12 +57,13 @@ document.getElementById('hero-health').innerText = '💖 ' + player.currentHealt
 
 ```js
 document.getElementById('enemy-type').innerText = currentEnemy.type;
+// Look at the index.html and see if you can add the currentEnemy's Health value to the page
 ```
 
 * The `attackEnemy()` function:
 
-  + Call the `enemyTurn()` function. 
-  + Reduce the current enemy's health by the player's attack power `(currentEnemy.health -= player.attackPower)`.
+  + Call the enemyTurn() function. 
+  + Reduce the current enemy's health by the player's attack power (currentEnemy.health -= player.attackPower).
   + If the current enemy's health is less than or equal to 0, call the `rewardPlayer()` function, and then select a random enemy from the current stage using the `pickRandomEnemyFromCurrentStage()` function.
   + Update the player and enemy information on the screen by calling the `drawPlayer()` and `drawCurrentEnemy()` functions.
 
@@ -77,24 +78,23 @@ document.getElementById('enemy-type').innerText = currentEnemy.type;
   + Calculate a random damage value within the enemy's maximum attack power `(Math.floor(Math.random() * currentEnemy.maxAttackPower))`.
   + Reduce the player's current health by the calculated damage value `(player.currentHealth -= enemyDamage)`.
   + Display a message to the user indicating the damage taken using the `messageUser()` function.
-  + If the player's current health reaches `0` or below, display a death message using the `messageUser()` function and call the `showGameOver()` function.
+  + If the player's current health reaches `0` or below, display a death message using the `messageUser("You Died")` function and call the `showGameOver()` function.
 
 * The `rewardPlayer()` function:
 
   + Increase the player's gold by the amount of gold carried by the current enemy `(player.gold += currentEnemy.gold).`
-  + If the player's gold reaches or exceeds `10,000`, display a victory message using the `messageUser()` function and call the `showVictory()` function.
+  + If the player's gold reaches or exceeds `10,000`, display a victory message using the `messageUser("🎉 You Win 🎉")` function and call the `showVictory()` function.
 
 * The `buyPotion()` function:
 
   + Check if the player has enough gold to buy a potion `(player.gold >= 5)`.
   + If so, increment the number of potions, deduct the required gold, display a message indicating the new potion count, and update the player information on the screen by calling the `drawPlayer()` function.
-  + If the player does not have enough gold, display a message using the `messageUser()` function.
+  + If the player does not have enough gold, display a message using the `messageUser("Not Enough 🪙")` function.
 
 * The `increaseAttack()` function:
 
   + Check if the player has enough gold to increase their attack power `(player.gold >= 10)`.
   + If so, increase the player's attack power, deduct the required gold, display a message indicating the attack power increase, and update the player information on the screen by calling the `drawPlayer()` function.
-  + If the player does not have enough gold, display a message using the `messageUser()` function.
-  + Finally, call the drawPlayer() function at the end of the script to display the initial player information on the screen.
+  + If the player does not have enough gold, display a message using the `messageUser("Not Enough 🪙")` function.
 
 Good luck building your game!
