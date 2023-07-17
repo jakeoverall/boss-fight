@@ -25,7 +25,7 @@
   <main>
 
     <!-- 🚩 THE START SCREEN -->
-    <div class="screen" id="start-screen">
+    <div class="screen centered" id="start-screen">
       <div class="action-box text-center">
         <button class="btn text-light" onclick="showMap()">Start Game</button>
       </div>
@@ -133,7 +133,12 @@
     <div id="messagebar"></div>
 
     <!-- 🎉 THE VICTORY SCREEN -->
-    <div class="screen centered" id="victory-screen"></div>
+    <div class="screen centered" id="victory-screen">
+      <div class="action-box show p-2">
+        <p class="fs-4 text-center">Congratulations</p>
+        <p>You have made enough 🪙🪙🪙 to retire</p>
+      </div>
+    </div>
 
     <!-- 😭 THE GAME OVER SCREEN -->
     <div class="screen centered" id="game-over-screen"></div>
